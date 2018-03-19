@@ -1,0 +1,19 @@
+<div id="app-2">
+    <span v-for="item in message">
+        <ul>
+      <li>{{item.text}}</li>
+    </ul>
+    </span>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script>
+
+      var app2 = new Vue({
+  el: '#app-2',
+  data: {
+    message: [{text:"123"},{text:"4567"}]
+  }
+})
+var i=0;
+setInterval(function(){app2.message.push({text:i});if(i<30)i++},900)
+  </script>
